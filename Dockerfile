@@ -33,6 +33,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/ttyd 
 
+EXPOSE 3000
 
-CMD ["ttyd", "-p", "$PORT", "bash;"]
+ENTRYPOINT ["ttyd"]
 
+CMD ["bash"]
