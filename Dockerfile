@@ -35,6 +35,5 @@ RUN apt-get update \
 
 EXPOSE $PORT
 
-ENTRYPOINT ["ttyd"]
+CMD ["ttyd", "-p", "$PORT", "bash"]
 
-CMD ["bash"]
