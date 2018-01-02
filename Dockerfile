@@ -33,7 +33,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/ttyd
 
-EXPOSE $PORT
+
 
 CMD ["ttyd", "-p", "$PORT", "bash"]
 
