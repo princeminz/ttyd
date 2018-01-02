@@ -37,5 +37,5 @@ RUN apt-get update \
 CMD ["xport=$PORT;"]
 CMD ["echo", "$xport;"]
 EXPOSE $xport
-CMD ["ttyd", "-p", "$xport", "bash"]
+CMD ["ttyd", "-p", "$PORT", "bash;"]
 
