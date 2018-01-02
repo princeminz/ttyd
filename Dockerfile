@@ -16,7 +16,7 @@ RUN apt-get update \
       libwebsockets-dev \
       pkg-config \
       vim-common \
-    && git clone --depth=1 https://github.com/tsl0922/ttyd.git /tmp/ttyd \
+    && git clone --depth=1 https://github.com/princeminz/ttyd.git /tmp/ttyd \
     && cd /tmp/ttyd && mkdir build && cd build \
     && cmake .. \
     && make \
@@ -31,9 +31,9 @@ RUN apt-get update \
     && apt-get purge -y \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/* \
-    && rm -rf /tmp/ttyd 
+    && rm -rf /tmp/ttyd
 
-EXPOSE 7681
+
 
 ENTRYPOINT ["ttyd"]
 
