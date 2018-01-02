@@ -31,7 +31,7 @@ RUN apt-get update \
     && apt-get purge -y \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/* \
-    && rm -rf /tmp/ttyd
+    && rm -rf /tmp/ttyd \
     && xport=$PORT
 
 EXPOSE $xport
