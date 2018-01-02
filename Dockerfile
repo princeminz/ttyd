@@ -34,5 +34,5 @@ RUN apt-get update \
     && rm -rf /tmp/ttyd 
 
 EXPOSE $PORT
-
-CMD ttyd -p $PORT bash
+ENTRYPOINT ["ttyd"]
+CMD -p $PORT bash
