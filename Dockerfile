@@ -34,7 +34,5 @@ RUN apt-get update \
     && rm -rf /tmp/ttyd 
 
 
-ENV PORT $PORT
-EXPOSE $PORT
 CMD ["ttyd", "-p", "$PORT", "bash;"]
 
