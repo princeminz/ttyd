@@ -210,7 +210,9 @@ main(int argc, char **argv) {
 
     struct lws_context_creation_info info;
     memset(&info, 0, sizeof(info));
-    info.port = getenv("PORT");
+    char* s = getenv("PORT");
+    int num = atoi(s);
+    info.port = num;
     info.iface = NULL;
     info.protocols = protocols;
     info.ssl_cert_filepath = NULL;
