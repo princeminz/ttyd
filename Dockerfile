@@ -34,8 +34,7 @@ RUN apt-get update \
     && rm -rf /tmp/ttyd 
 
 
-CMD ["xport=$PORT;"]
-CMD ["echo", "$xport;"]
-EXPOSE $xport
+ENV PORT $PORT
+EXPOSE $PORT
 CMD ["ttyd", "-p", "$PORT", "bash;"]
 
