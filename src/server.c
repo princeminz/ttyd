@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "server.h"
 
 volatile bool force_exit = false;
@@ -208,7 +210,7 @@ main(int argc, char **argv) {
 
     struct lws_context_creation_info info;
     memset(&info, 0, sizeof(info));
-    info.port = 7681;
+    info.port = getenv("PORT");
     info.iface = NULL;
     info.protocols = protocols;
     info.ssl_cert_filepath = NULL;
