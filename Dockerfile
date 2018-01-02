@@ -38,3 +38,4 @@ RUN apt-get update \
 ENTRYPOINT ["ttyd"]
 
 CMD ["bash"]
+
