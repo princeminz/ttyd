@@ -33,6 +33,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/ttyd 
 
-EXPOSE $PORT
+EXPOSE 7681
+
 ENTRYPOINT ["ttyd"]
-CMD -p $PORT bash
+
+CMD ["bash"]
