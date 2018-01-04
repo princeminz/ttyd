@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM heroku/heroku:16
 LABEL maintainer "Shuanglei Tao - tsl0922@gmail.com"
 
 RUN apt-get update \
@@ -22,8 +22,6 @@ RUN apt-get update \
     && make \
     && make install \
     && apt-get remove -y --purge \
-        cmake \
-        g++ \
         libwebsockets-dev \
         libjson-c-dev \
         libssl-dev \
